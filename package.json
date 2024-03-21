@@ -15,5 +15,8 @@
     "astro": "^4.5.8",
     "solid-js": "^1.8.16",
     "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "cypress": "^13.7.0"
   }
 }
