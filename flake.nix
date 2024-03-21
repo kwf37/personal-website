@@ -43,6 +43,7 @@
                   esbenp.prettier-vscode
                   formulahendry.auto-rename-tag
                   yzhang.markdown-all-in-one
+                  astro-build.astro-vscode
                 ];
               };
             in
