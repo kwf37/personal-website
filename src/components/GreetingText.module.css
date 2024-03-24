@@ -1,16 +1,32 @@
 .greeting-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 h1 {
+  text-align: center;
+  margin: 1.5rem;
   font-size: 2rem;
+  font-family: "Comfortaa Variable", sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px;
+  font-size: 1rem;
+  font-weight: 400;
   font-family: "Comfortaa Variable", sans-serif;
 }
 
 @media (min-width: 1200px) {
   h1 {
+    text-align: left;
     font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
   }
 }
 

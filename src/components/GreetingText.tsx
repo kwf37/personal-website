@@ -13,6 +13,7 @@ export const GreetingText: Component<{}> = () => {
         <span class={styles["animate-is"]}>is </span>
         <span class={styles["animate-ken"]}>Ken</span>
       </h1>
+      <h2>I am a software engineer</h2>
     </div>
   );
 };
