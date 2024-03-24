@@ -7,16 +7,22 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.9",
+    "@astrojs/check": "^0.5.10",
     "@astrojs/solid-js": "^4.0.1",
-    "astro": "^4.5.8",
+    "astro": "^4.5.9",
     "solid-js": "^1.8.16",
     "typescript": "^5.4.3"
   },
   "devDependencies": {
-    "cypress": "^13.7.0"
+    "@solidjs/testing-library": "^0.8.6",
+    "@testing-library/jest-dom": "^6.4.2",
+    "cypress": "^13.7.1",
+    "jsdom": "^24.0.0",
+    "vite-plugin-solid": "^2.10.2",
+    "vitest": "^1.4.0"
   }
 }
