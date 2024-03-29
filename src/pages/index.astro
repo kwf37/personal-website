@@ -2,10 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import { PageBase } from '../components/PageBase.tsx'
 import { GreetingText } from '../components/GreetingText.tsx'
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+
+const softwarePosts = await getCollection("software");
 ---
 
 <Layout title="Welcome to Astro.">
 	<PageBase>
 		<GreetingText/>
+		{ softwarePosts.map((post) => {
+			return <Image src={post.data.logo} alt={post.data.logoAlt} />
+		})}
 	</PageBase>
 </Layout>
