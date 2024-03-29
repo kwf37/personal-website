@@ -13,7 +13,7 @@ const softwarePosts = await getCollection("software");
 	<PageBase>
 		<GreetingText/>
 		{ softwarePosts.map((post) => {
-			return <Image src={post.data.logo} alt={post.data.logoAlt} />
+			return <Image src={post.data.logo} alt={post.data.logoAlt} width={60} height={60}/>
 		})}
 	</PageBase>
 </Layout>
