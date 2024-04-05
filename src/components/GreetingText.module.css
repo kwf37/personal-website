@@ -20,6 +20,10 @@ h2 {
 }
 
 @media (min-width: 1200px) {
+  .greeting-container {
+    margin-top: 100px;
+  }
+
   h1 {
     text-align: left;
     font-size: 5rem;

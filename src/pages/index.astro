@@ -3,8 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import { PageBase } from '../components/PageBase.tsx'
 import { GreetingText } from '../components/GreetingText.tsx'
 import { getCollection } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
-import { Image } from 'astro:assets';
+import { SoftwareIndex } from '../components/SoftwareIndex';
 
 const softwarePosts = await getCollection("software");
 ---
@@ -12,8 +11,7 @@ const softwarePosts = await getCollection("software");
 <Layout title="Welcome to Astro.">
 	<PageBase>
 		<GreetingText/>
-		{ softwarePosts.map((post) => {
-			return <Image src={post.data.logo} alt={post.data.logoAlt} width={60} height={60}/>
-		})}
+		<hr color="#d6d6d6"/>
+		<SoftwareIndex entries={softwarePosts} transition:persist/>
 	</PageBase>
 </Layout>
