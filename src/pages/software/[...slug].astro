@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import { GreetingText } from '../../components/GreetingText';
+import { PageBase } from '../../components/PageBase';
+import { SoftwareIndex } from '../../components/SoftwareIndex';
+import Layout from '../../layouts/Layout.astro';
+import { PostDialog } from '../../components/PostDialog';
+
+export async function getStaticPaths() {
+  const softwareEntries = await getCollection('software');
+  return softwareEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const softwareEntries = await getCollection('software');
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<Layout title="Welcome to Astro.">
+	<PageBase>
+		<GreetingText/>
+		<hr color="#d6d6d6"/>
+		<SoftwareIndex entries={softwareEntries} transition:persist />
+        <PostDialog frontmatter={entry.data} client:only="solidjs">
+            <Content />
+        </PostDialog>
+	</PageBase>
+</Layout>

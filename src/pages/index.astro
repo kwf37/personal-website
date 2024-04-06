@@ -2,10 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import { PageBase } from '../components/PageBase.tsx'
 import { GreetingText } from '../components/GreetingText.tsx'
+import { getCollection } from 'astro:content';
+import { SoftwareIndex } from '../components/SoftwareIndex';
+
+const softwarePosts = await getCollection("software");
 ---
 
 <Layout title="Welcome to Astro.">
 	<PageBase>
 		<GreetingText/>
+		<hr color="#d6d6d6"/>
+		<SoftwareIndex entries={softwarePosts} transition:persist/>
 	</PageBase>
 </Layout>
