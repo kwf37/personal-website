@@ -15,6 +15,8 @@
     "@astrojs/mdx": "^2.2.2",
     "@astrojs/solid-js": "^4.0.1",
     "@fontsource-variable/comfortaa": "^5.0.19",
+    "@fontsource-variable/open-sans": "^5.0.28",
+    "@fontsource/average-sans": "^5.0.12",
     "astro": "^4.5.9",
     "solid-js": "^1.8.16",
     "typescript": "^5.4.3"
