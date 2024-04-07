@@ -7,7 +7,7 @@ const softwareCollection = defineCollection({
       title: z.string(),
       company: z.string(),
       startDate: z.date(),
-      endDate: z.date(),
+      endDate: z.date().optional(),
       description: z.string(),
       logo: image(),
       logoAlt: z.string(),

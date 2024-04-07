@@ -6,8 +6,10 @@ import { Logo } from "./Logo";
 import "@fontsource-variable/open-sans";
 import "@fontsource/average-sans";
 
-const dateString = (start: Date, end: Date) => {
-  return `${start.getMonth()}/${start.getFullYear()}-${end.getMonth()}/${end.getFullYear()}`;
+const dateString = (start: Date, end: Date | undefined) => {
+  if (end)
+    return `${start.getMonth()}/${start.getFullYear()}-${end.getMonth()}/${end.getFullYear()}`;
+  else return `${start.getMonth()}/${start.getFullYear()}-Present`;
 };
 
 export const PostDialog: Component<{
