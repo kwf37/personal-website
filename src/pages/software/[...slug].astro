@@ -13,7 +13,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const softwareEntries = await getCollection('software');
+const softwarePosts = (await getCollection("software")).sort((a, b) => b.data.sortOrder - a.data.sortOrder);
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
@@ -21,7 +21,7 @@ const { Content } = await entry.render();
 	<PageBase>
 		<GreetingText/>
 		<hr color="#d6d6d6"/>
-		<SoftwareIndex entries={softwareEntries} transition:persist />
+		<SoftwareIndex entries={softwarePosts} transition:persist />
         <PostDialog frontmatter={entry.data} client:only="solidjs">
             <Content />
         </PostDialog>

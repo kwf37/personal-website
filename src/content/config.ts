@@ -11,6 +11,7 @@ const softwareCollection = defineCollection({
       description: z.string(),
       logo: image(),
       logoAlt: z.string(),
+      sortOrder: z.number(),
       tags: z.array(z.string()),
     }),
 });

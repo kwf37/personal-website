@@ -5,7 +5,7 @@ import { GreetingText } from '../components/GreetingText.tsx'
 import { getCollection } from 'astro:content';
 import { SoftwareIndex } from '../components/SoftwareIndex';
 
-const softwarePosts = await getCollection("software");
+const softwarePosts = (await getCollection("software")).sort((a, b) => b.data.sortOrder - a.data.sortOrder);
 ---
 
 <Layout title="Welcome to Astro.">
