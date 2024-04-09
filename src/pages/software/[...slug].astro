@@ -13,7 +13,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const softwarePosts = (await getCollection("software")).sort((a, b) => b.data.sortOrder - a.data.sortOrder);
+const softwarePosts = await getCollection("software");
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---

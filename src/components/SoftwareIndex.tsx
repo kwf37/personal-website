@@ -7,9 +7,12 @@ import { LogoCard } from "./LogoCard";
 export const SoftwareIndex: Component<{
   entries: CollectionEntry<"software">[];
 }> = ({ entries }) => {
+  const sortedEntries = entries.sort(
+    (a, b) => a.data.sortOrder - b.data.sortOrder
+  );
   return (
     <div class={styles.container}>
-      {entries.map((frontmatter) => {
+      {sortedEntries.map((frontmatter) => {
         return <LogoCard frontmatter={frontmatter} />;
       })}
     </div>
