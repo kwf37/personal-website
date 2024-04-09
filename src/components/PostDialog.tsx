@@ -6,8 +6,14 @@ import { Logo } from "./Logo";
 import "@fontsource-variable/open-sans";
 import "@fontsource/average-sans";
 
-const dateString = (start: Date, end: Date) => {
-  return `${start.getMonth()}/${start.getFullYear()}-${end.getMonth()}/${end.getFullYear()}`;
+const dateString = (start: Date, end: Date | undefined) => {
+  // TODO use Internationalization API to get proper month names
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl
+  if (end)
+    return `${start.getMonth() + 1}/${start.getFullYear()}-${
+      end.getMonth() + 1
+    }/${end.getFullYear()}`;
+  else return `${start.getMonth() + 1}/${start.getFullYear()}-Present`;
 };
 
 export const PostDialog: Component<{
