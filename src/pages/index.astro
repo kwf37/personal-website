@@ -10,7 +10,7 @@ const softwarePosts = await getCollection("software");
 
 <Layout title="Welcome to Astro.">
 	<PageBase>
-		<GreetingText/>
+		<GreetingText client:only="solidjs"/>
 		<hr color="#d6d6d6"/>
 		<SoftwareIndex entries={softwarePosts} transition:persist/>
 	</PageBase>
