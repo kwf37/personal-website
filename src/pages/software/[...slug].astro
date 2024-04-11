@@ -19,7 +19,7 @@ const { Content } = await entry.render();
 ---
 <Layout title="Ken, Software Engineer">
 	<PageBase>
-		<GreetingText/>
+		<GreetingText client:only="solidjs"/>
 		<hr color="#d6d6d6"/>
 		<SoftwareIndex entries={softwarePosts} transition:persist />
         <PostDialog frontmatter={entry.data} client:only="solidjs">
