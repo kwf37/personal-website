@@ -39,7 +39,12 @@ h2 {
 .animate-my,
 .animate-name,
 .animate-is,
-.animate-ken {
+.animate-ken,
+.animate-i,
+.animate-am,
+.animate-a,
+.animate-software,
+.animate-engineer {
   animation-name: fadeIn;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -66,6 +71,26 @@ h2 {
 
 .animate-ken {
   animation-delay: 2.7s;
+}
+
+.animate-i {
+  animation-delay: 3.9s;
+}
+
+.animate-am {
+  animation-delay: 4.2s;
+}
+
+.animate-a {
+  animation-delay: 4.5s;
+}
+
+.animate-software {
+  animation-delay: 5.2s;
+}
+
+.animate-engineer {
+  animation-delay: 6s;
 }
 
 @keyframes fadeIn {
