@@ -41,6 +41,7 @@ export const PostDialog: Component<{
       >
         <span class={styles.header}>
           <Logo
+            size="60px"
             src={props.frontmatter.logo.src}
             alt={props.frontmatter.logoAlt}
           ></Logo>
