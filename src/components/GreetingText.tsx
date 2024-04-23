@@ -2,8 +2,10 @@ import { createSignal, type Component, type JSX, onMount } from "solid-js";
 import styles from "./GreetingText.module.css";
 import "@fontsource-variable/comfortaa";
 
-export const GreetingText: Component<{}> = () => {
-  const [animationDone, setAnimationDone] = createSignal(false);
+export const GreetingText: Component<{ animate?: boolean }> = ({
+  animate = false,
+}) => {
+  const [animationDone, setAnimationDone] = createSignal(!animate);
 
   const skipHandler = () => {
     setAnimationDone(true);
